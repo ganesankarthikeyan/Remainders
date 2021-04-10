@@ -1,5 +1,6 @@
 /home/karthikeyan/Remainders/src/main/java/com/example/remainder/dao/UserRepository.java
 /home/karthikeyan/Remainders/src/main/java/com/example/remainder/pojo/Response.java
+/home/karthikeyan/Remainders/src/main/java/com/example/remainder/pojo/Errors.java
 /home/karthikeyan/Remainders/src/main/java/com/example/remainder/Remainders.java
 /home/karthikeyan/Remainders/src/main/java/com/example/remainder/pojo/LoginUser.java
 /home/karthikeyan/Remainders/src/main/java/com/example/remainder/service/RemainderService.java

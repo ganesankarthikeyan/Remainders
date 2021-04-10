@@ -3,6 +3,7 @@ com/example/remainder/dao/UserRepository.class
 com/example/remainder/controller/RemainderController.class
 com/example/remainder/pojo/LoginUser.class
 com/example/remainder/Remainders.class
+com/example/remainder/pojo/Errors.class
 com/example/remainder/pojo/Response.class
 com/example/remainder/pojo/RegisterUser.class
 com/example/remainder/service/RemainderService.class

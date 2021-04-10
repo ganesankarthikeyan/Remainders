@@ -1,13 +1,17 @@
 package com.example.remainder.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.remainder.pojo.Errors;
 import com.example.remainder.pojo.LoginUser;
 import com.example.remainder.pojo.RegisterUser;
 import com.example.remainder.pojo.Response;
@@ -46,6 +50,12 @@ public class RemainderController {
          System.out.println("already registered");
       }
       return new ResponseEntity<Response>(new Response(false, isRegistered), HttpStatus.OK);
+   }
+
+   @GetMapping("/errors")
+   @ResponseBody
+   public ArrayList<Errors> getErros(){
+      return remainderService.getErrors();
    }
 
 }
