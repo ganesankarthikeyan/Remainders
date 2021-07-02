@@ -4,21 +4,26 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.example.remainder.pojo.LoginUser;
 import com.example.remainder.pojo.RegisterUser;
 
 @Repository
+@Service
 public class RemainderDao {
 
    @Autowired
    UserRepository userRepository;
-
+ public boolean flag=false;
+ public String id="";
    public boolean validateLogin(LoginUser user) {
       Optional<LoginUser> optionalLoginUser = userRepository.findById(user.getNumber());
       if (optionalLoginUser.isPresent()) {
          LoginUser dbuser = optionalLoginUser.get();
          if (user.getPassword().equalsIgnoreCase(dbuser.getPassword())) {
+        	 flag=true;
+        	 id=user.getNumber();
             return true;
          }
       }
